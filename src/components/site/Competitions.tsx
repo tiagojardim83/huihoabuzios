@@ -1,4 +1,6 @@
+import { useRef, useState } from "react";
 import { Trophy, Medal, Flag, MapPin, Play } from "lucide-react";
+import competitionVideo from "@/assets/competicao.mp4";
 
 const items = [
   {
@@ -31,7 +33,16 @@ const items = [
   },
 ];
 
-export const Competitions = () => (
+export const Competitions = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [playing, setPlaying] = useState(false);
+
+  const handlePlay = () => {
+    setPlaying(true);
+    videoRef.current?.play();
+  };
+
+  return (
   <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container-prose">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
@@ -58,13 +69,26 @@ export const Competitions = () => (
           esportiva aos principais campeonatos do Brasil e do exterior.
         </p>
 
-        <div className="reveal relative aspect-video rounded-sm overflow-hidden border border-dashed border-white/30 bg-white/10 flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3 text-primary-foreground/70">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary">
-              <Play size={22} className="ml-0.5" />
-            </span>
-            <span className="text-xs tracking-[0.18em] uppercase">Vídeo em breve</span>
-          </div>
+        <div className="reveal relative aspect-video rounded-sm overflow-hidden bg-black">
+          <video
+            ref={videoRef}
+            src={competitionVideo}
+            controls={playing}
+            playsInline
+            className="h-full w-full object-cover"
+          />
+          {!playing && (
+            <button
+              type="button"
+              onClick={handlePlay}
+              aria-label="Reproduzir vídeo"
+              className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-smooth"
+            >
+              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-elegant">
+                <Play size={22} className="ml-0.5" />
+              </span>
+            </button>
+          )}
         </div>
       </div>
 
@@ -93,4 +117,5 @@ export const Competitions = () => (
       </div>
     </div>
   </section>
-);
+  );
+};
