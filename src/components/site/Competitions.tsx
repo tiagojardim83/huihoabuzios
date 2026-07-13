@@ -40,20 +40,22 @@ export const Competitions = () => (
             <span className="h-px w-8 bg-primary" /> Competições
           </span>
           <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
-            Onde o Hui Hoa<br />já esteve.
+            Evolução em<br />cada remada.
           </h2>
         </div>
         <p className="reveal max-w-md text-muted-foreground">
-          Do Rio de Janeiro aos circuitos internacionais, levamos o nome de Búzios para
-          onde a canoa nos leva.
+          Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
+          nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
+          espírito de equipe.
         </p>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
         <p className="reveal text-foreground/75 text-lg leading-relaxed">
-          O Hui Hoa é um clube que prepara o atleta para competições. Treinos semanais
-          focados em técnica e desempenho dentro d'água elevam o nível de cada remador,
-          da base aos circuitos nacionais e internacionais.
+          O Hui Hoa é um clube dedicado à formação de atletas de alta performance na
+          canoa havaiana. Com treinos semanais focados em técnica, preparação física e
+          desempenho competitivo, desenvolvemos remadores capazes de evoluir da iniciação
+          esportiva aos principais campeonatos do Brasil e do exterior.
         </p>
 
         <div className="reveal relative aspect-video rounded-sm overflow-hidden border border-dashed border-border bg-secondary/40 flex items-center justify-center">
