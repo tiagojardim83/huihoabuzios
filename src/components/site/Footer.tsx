@@ -59,21 +59,6 @@ export const Footer = () => (
           </ul>
           <div className="flex gap-3 mt-5">
             <a
-              href="https://wa.me/5522988392494"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="WhatsApp"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-background/10 hover:bg-accent hover:text-accent-foreground transition-smooth"
-            >
-              <img
-                src={whatsappIcon}
-                alt="WhatsApp"
-                width={18}
-                height={18}
-                className="w-[18px] h-[18px]"
-              />
-            </a>
-            <a
               href="https://www.instagram.com/huihoa_buzios/"
               target="_blank"
               rel="noopener noreferrer"
