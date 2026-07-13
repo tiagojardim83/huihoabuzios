@@ -13,6 +13,18 @@ const links = [
   { href: "#faq", label: "FAQ" },
 ];
 
+// Mobile menu labels match each section's kicker text exactly.
+const menuLinks = [
+  { href: "#historia", label: "Nossa História" },
+  { href: "#numeros", label: "Nossos Números" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#kids", label: "Projeto Kids" },
+  { href: "#competicoes", label: "Competições" },
+  { href: "#galeria", label: "Galeria" },
+  { href: "#patrocinio", label: "Patrocínio" },
+  { href: "#faq", label: "Perguntas Frequentes" },
+];
+
 export const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -101,7 +113,7 @@ export const Navbar = () => {
 
         <div className="relative h-full flex flex-col pt-24 pb-8 px-6">
           <ul className="flex-1 flex flex-col justify-center gap-1 -mt-8">
-            {links.map((l, i) => (
+            {menuLinks.map((l, i) => (
               <li
                 key={l.href}
                 className={`border-b border-background/10 transition-all duration-500 ease-smooth ${
@@ -129,7 +141,7 @@ export const Navbar = () => {
             className={`shrink-0 space-y-6 transition-all duration-500 ease-smooth ${
               open ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
-            style={{ transitionDelay: open ? `${120 + links.length * 60}ms` : "0ms" }}
+            style={{ transitionDelay: open ? `${120 + menuLinks.length * 60}ms` : "0ms" }}
           >
             <Button asChild variant="ember" size="xl" className="w-full">
               <a
