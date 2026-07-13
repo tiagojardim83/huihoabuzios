@@ -10,34 +10,28 @@ import frameRemada from "@/assets/frame-remada.jpg";
 import frameSunsetRemo from "@/assets/frame-sunset-remo.jpg";
 import luan from "@/assets/luan.jpg";
 
-type Tile =
-  | { type: "photo"; src: string; alt: string; span: string }
-  | { type: "heading"; span: string };
-
-const tiles: Tile[] = [
-  { type: "photo", src: frameCanoa, alt: "Canoa Hui Hoa", span: "md:col-span-5 md:row-span-4" },
-  { type: "photo", src: paddling, alt: "Regata Hui Hoa", span: "md:col-span-3 md:row-span-3" },
-  { type: "photo", src: frameSunsetRemo, alt: "Sunset Hui Hoa", span: "md:col-span-4 md:row-span-4" },
-  { type: "photo", src: vitoriaImg, alt: "Equipe Hui Hoa", span: "md:col-span-4 md:row-span-3" },
-  { type: "heading", span: "md:col-span-4 md:row-span-3" },
-  { type: "photo", src: huddle, alt: "Unidade Hui Hoa", span: "md:col-span-4 md:row-span-3" },
-  { type: "photo", src: teamBeach, alt: "Equipe na areia", span: "md:col-span-5 md:row-span-3" },
-  { type: "photo", src: hugTeam, alt: "Irmandade Hui Hoa", span: "md:col-span-3 md:row-span-4" },
-  { type: "photo", src: frameRemada, alt: "Remada Hui Hoa", span: "md:col-span-4 md:row-span-3" },
-  { type: "photo", src: sunset1, alt: "Nascer do sol", span: "md:col-span-4 md:row-span-3" },
-  { type: "photo", src: luan, alt: "Projeto Kids", span: "md:col-span-3 md:row-span-3" },
-  { type: "photo", src: sunset2, alt: "Horizonte", span: "md:col-span-5 md:row-span-3" },
-  { type: "photo", src: frameCanoa, alt: "Ao largo", span: "md:col-span-4 md:row-span-3" },
+const photos = [
+  { src: frameCanoa, alt: "Canoa Hui Hoa", aspect: "aspect-[3/4]" },
+  { src: paddling, alt: "Regata Hui Hoa", aspect: "aspect-square" },
+  { src: frameSunsetRemo, alt: "Sunset Hui Hoa", aspect: "aspect-[4/5]" },
+  { src: vitoriaImg, alt: "Equipe Hui Hoa", aspect: "aspect-[4/3]" },
+  { src: huddle, alt: "Unidade Hui Hoa", aspect: "aspect-square" },
+  { src: teamBeach, alt: "Equipe na areia", aspect: "aspect-[4/3]" },
+  { src: hugTeam, alt: "Irmandade Hui Hoa", aspect: "aspect-[3/4]" },
+  { src: frameRemada, alt: "Remada Hui Hoa", aspect: "aspect-[4/5]" },
+  { src: sunset1, alt: "Nascer do sol", aspect: "aspect-square" },
+  { src: luan, alt: "Projeto Kids", aspect: "aspect-[3/4]" },
+  { src: sunset2, alt: "Horizonte", aspect: "aspect-[4/3]" },
 ];
 
 export const Gallery = () => (
   <section id="galeria" className="py-16 md:py-24 bg-foreground text-background">
     <div className="container-prose">
-      <div className="mb-14 md:hidden">
+      <div className="mb-14">
         <span className="eyebrow text-accent reveal">
           <span className="h-px w-8 bg-accent" /> Galeria
         </span>
-        <h2 className="reveal font-display text-4xl mt-6 uppercase text-background text-balance">
+        <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-background text-balance">
           Frames da nossa remada.
         </h2>
         <p className="reveal mt-4 text-background/60">
@@ -45,39 +39,21 @@ export const Gallery = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-12 md:auto-rows-[90px] gap-4 md:gap-6 md:grid-flow-row-dense">
-        {tiles.map((t, i) =>
-          t.type === "heading" ? (
-            <div
-              key={i}
-              className={`reveal hidden md:flex flex-col justify-center px-2 ${t.span}`}
-              style={{ transitionDelay: `${i * 50}ms` }}
-            >
-              <span className="eyebrow text-accent">
-                <span className="h-px w-8 bg-accent" /> Galeria
-              </span>
-              <h2 className="font-display text-4xl lg:text-6xl mt-4 uppercase text-background leading-[0.9]">
-                Frames da<br />nossa<br />remada.
-              </h2>
-              <p className="mt-4 text-sm text-background/60 max-w-xs">
-                Registros feitos por atletas e amigos da equipe.
-              </p>
-            </div>
-          ) : (
-            <figure
-              key={i}
-              className={`reveal group relative overflow-hidden aspect-[4/3] md:aspect-auto md:h-full ${t.span}`}
-              style={{ transitionDelay: `${i * 50}ms` }}
-            >
-              <img
-                src={t.src}
-                alt={t.alt}
-                loading="lazy"
-                className="h-full w-full object-cover photo-levels transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-              />
-            </figure>
-          )
-        )}
+      <div className="columns-2 sm:columns-3 md:columns-4 gap-4 md:gap-6">
+        {photos.map((p, i) => (
+          <figure
+            key={i}
+            className={`reveal group relative overflow-hidden break-inside-avoid mb-4 md:mb-6 ${p.aspect}`}
+            style={{ transitionDelay: `${i * 50}ms` }}
+          >
+            <img
+              src={p.src}
+              alt={p.alt}
+              loading="lazy"
+              className="h-full w-full object-cover photo-levels transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+            />
+          </figure>
+        ))}
       </div>
     </div>
   </section>
