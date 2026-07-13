@@ -12,7 +12,7 @@ export const Footer = () => (
             loading="lazy"
             className="h-12 md:h-14 w-auto"
           />
-          <p className="mt-4 max-w-md text-background/60 text-sm leading-relaxed">
+          <p className="mt-4 max-w-md text-background/90 text-sm leading-relaxed">
             Equipe de canoa havaiana de Búzios. Comunidade, performance e oceano — desde 2018.
           </p>
           <a
@@ -27,7 +27,7 @@ export const Footer = () => (
         </div>
 
         <div className="md:col-span-5">
-          <h3 className="text-xs tracking-[0.2em] uppercase text-background/50 mb-4">Explore</h3>
+          <h3 className="text-xs tracking-[0.2em] uppercase text-background/85 mb-4">Explore</h3>
           <ul className="space-y-2 text-sm">
             <li><a href="#historia" className="hover:text-accent transition-smooth">História</a></li>
             <li><a href="#experiencia" className="hover:text-accent transition-smooth">Experiência</a></li>
@@ -38,7 +38,7 @@ export const Footer = () => (
         </div>
       </div>
 
-      <div className="border-t border-background/15 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-background/50">
+      <div className="border-t border-background/15 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-background/85">
         <p>© {new Date().getFullYear()} Hui Hoa Búzios. Todos os direitos reservados.</p>
         <p>Feito com sal, sol e coração.</p>
       </div>

@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-secondary hover:text-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         hero: "bg-primary text-primary-foreground hover:bg-primary-deep hover:-translate-y-0.5 shadow-soft hover:shadow-glow transition-smooth",
-        ember: "bg-accent text-accent-foreground hover:bg-accent/90 hover:-translate-y-0.5 transition-smooth",
+        ember: "bg-accent text-foreground hover:bg-accent/90 hover:-translate-y-0.5 transition-smooth",
         onDark: "border border-white/25 bg-white/5 text-white backdrop-blur-md hover:bg-white hover:text-primary transition-smooth",
       },
       size: {

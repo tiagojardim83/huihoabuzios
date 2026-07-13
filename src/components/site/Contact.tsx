@@ -106,8 +106,8 @@ export const Contact = () => {
               </span>
               <div>
                 <div className="text-xs tracking-[0.18em] uppercase text-muted-foreground">E-mail</div>
-                <a href="mailto:contato@huihoabuzios.com.br" className="font-medium hover:text-primary transition-smooth">
-                  contato@huihoabuzios.com.br
+                <a href="mailto:huihoabuzios@gmail.com" className="font-medium hover:text-primary transition-smooth">
+                  huihoabuzios@gmail.com
                 </a>
               </div>
             </li>
