@@ -38,9 +38,9 @@ export const Sponsorship = () => (
         </div>
 
         <div className="lg:col-span-6">
-          <div className="reveal grid sm:grid-cols-2 gap-px bg-border rounded-sm overflow-hidden border border-border">
+          <div className="reveal grid sm:grid-cols-2 gap-3">
             {perks.map((p) => (
-              <div key={p} className="bg-card p-6 flex items-center gap-3">
+              <div key={p} className="glass rounded-sm p-6 flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-primary/10 text-primary">
                   <Check size={16} strokeWidth={3} />
                 </span>

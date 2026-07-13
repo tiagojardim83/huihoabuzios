@@ -51,7 +51,7 @@ export const Experience = () => (
         {items.map((it, i) => (
           <div
             key={it.title}
-            className="reveal group bg-card p-8 md:p-10 hover:bg-foreground hover:text-background transition-smooth"
+            className="reveal group glass p-8 md:p-10 hover:bg-foreground hover:text-background transition-smooth"
             style={{ transitionDelay: `${i * 80}ms` }}
           >
             <it.icon size={28} className="text-primary group-hover:text-accent transition-smooth" />

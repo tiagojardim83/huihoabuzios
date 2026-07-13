@@ -15,11 +15,11 @@ const faqs = [
 ];
 
 export const FAQ = () => (
-  <section id="faq" className="py-16 md:py-24 bg-secondary/50">
+  <section id="faq" className="py-16 md:py-24 bg-accent text-accent-foreground">
     <div className="container-prose max-w-3xl">
       <div className="text-center mb-14">
-        <span className="eyebrow text-primary reveal justify-center flex">
-          <span className="h-px w-8 bg-primary" /> Perguntas Frequentes
+        <span className="eyebrow text-white reveal justify-center flex">
+          <span className="h-px w-8 bg-white" /> Perguntas Frequentes
         </span>
         <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
           Antes de<br />molhar o remo.
@@ -31,7 +31,7 @@ export const FAQ = () => (
           <AccordionItem
             key={i}
             value={`item-${i}`}
-            className="reveal bg-card border border-border rounded-sm px-6"
+            className="reveal glass text-foreground rounded-sm px-6"
             style={{ transitionDelay: `${i * 40}ms` }}
           >
             <AccordionTrigger className="text-left font-display text-lg md:text-xl uppercase tracking-tight hover:no-underline py-5">

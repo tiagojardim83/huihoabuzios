@@ -11,7 +11,6 @@ export const Counter = ({ to, duration = 1600, suffix = "", className }: Counter
   const [value, setValue] = useState(0);
   const ref = useRef<HTMLSpanElement>(null);
   const rafRef = useRef<number | null>(null);
-  const seen = useRef(false);
 
   const run = () => {
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
@@ -28,12 +27,21 @@ export const Counter = ({ to, duration = 1600, suffix = "", className }: Counter
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    // Desktop (mouse-capable): counting is triggered by hover instead of scroll.
+    const hoverCapable = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+    if (hoverCapable) return;
+
+    // Mobile/touch: replay the count-up every time the number enters the
+    // viewport, resetting back to 0 when it scrolls out.
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting && !seen.current) {
-            seen.current = true;
+          if (e.isIntersecting) {
             run();
+          } else {
+            if (rafRef.current) cancelAnimationFrame(rafRef.current);
+            setValue(0);
           }
         });
       },

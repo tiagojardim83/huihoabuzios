@@ -53,7 +53,7 @@ export const Competitions = () => (
         {items.map((it, i) => (
           <article
             key={it.title}
-            className="reveal group relative border border-border p-7 rounded-sm hover:border-primary hover:shadow-elegant hover:-translate-y-1 transition-smooth bg-card"
+            className="reveal group relative glass p-7 rounded-sm hover:shadow-elegant hover:-translate-y-1 transition-smooth"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="flex items-center justify-between">

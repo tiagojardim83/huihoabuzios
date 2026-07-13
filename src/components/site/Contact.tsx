@@ -46,12 +46,20 @@ export const Contact = () => {
           <ul className="reveal mt-10 space-y-5">
             <li className="flex items-start gap-4">
               <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
-                <img
-                  src={whatsappIcon}
-                  alt="WhatsApp"
-                  width={18}
-                  height={18}
-                  className="w-[18px] h-[18px]"
+                <span
+                  role="img"
+                  aria-label="WhatsApp"
+                  className="block h-[18px] w-[18px] bg-current"
+                  style={{
+                    WebkitMaskImage: `url(${whatsappIcon})`,
+                    maskImage: `url(${whatsappIcon})`,
+                    WebkitMaskSize: "contain",
+                    maskSize: "contain",
+                    WebkitMaskRepeat: "no-repeat",
+                    maskRepeat: "no-repeat",
+                    WebkitMaskPosition: "center",
+                    maskPosition: "center",
+                  }}
                 />
               </span>
               <div>
@@ -126,7 +134,7 @@ export const Contact = () => {
 
         <form
           onSubmit={onSubmit}
-          className="reveal lg:col-span-3 bg-card border border-border rounded-sm p-8 md:p-12 shadow-soft h-fit"
+          className="reveal lg:col-span-3 glass rounded-sm p-8 md:p-12 shadow-soft h-fit"
           noValidate
         >
           <div className="grid sm:grid-cols-2 gap-5">
