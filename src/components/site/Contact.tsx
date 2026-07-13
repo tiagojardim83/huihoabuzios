@@ -163,7 +163,7 @@ export const Contact = () => {
             </div>
           </div>
 
-          <Button type="submit" variant="hero" size="xl" className="mt-8 w-full sm:w-auto">
+          <Button type="submit" variant="hero" size="xl" className="mt-8 w-full sm:w-auto sm:min-w-[11rem]">
             Enviar mensagem <Send size={16} />
           </Button>
           <p className="mt-4 text-xs text-muted-foreground">

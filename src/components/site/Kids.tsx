@@ -25,7 +25,7 @@ export const Kids = () => (
           </p>
         </div>
         <div className="mt-10">
-          <Button asChild variant="ember" size="xl">
+          <Button asChild variant="ember" size="xl" className="min-w-[11rem]">
             <a href="#patrocinio">
               Quero apoiar o projeto <ArrowRight size={18} />
             </a>

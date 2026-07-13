@@ -29,7 +29,7 @@ export const Sponsorship = () => (
           </p>
 
           <div className="reveal mt-10">
-            <Button asChild variant="hero" size="xl">
+            <Button asChild variant="hero" size="xl" className="min-w-[11rem]">
               <a href="#contato">
                 Apoiar o Hui Hoa <ArrowRight size={18} />
               </a>

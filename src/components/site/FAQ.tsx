@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import sunset from "@/assets/sunset-1.jpg";
 
 const faqs = [
   { q: "Quem pode remar?", a: "Qualquer pessoa maior de 12 anos com disposição para se aventurar no mar. Recebemos iniciantes e atletas experientes." },
@@ -15,7 +16,19 @@ const faqs = [
 ];
 
 export const FAQ = () => (
-  <section id="faq" className="py-16 md:py-24 bg-accent text-accent-foreground">
+  <section id="faq" className="relative isolate py-16 md:py-24 text-accent-foreground overflow-hidden">
+    <div className="absolute inset-0 -z-10">
+      <img
+        src={sunset}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        className="h-full w-full object-cover photo-levels"
+      />
+      <div className="absolute inset-0 bg-accent/80 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
+    </div>
+
     <div className="container-prose max-w-3xl">
       <div className="text-center mb-14">
         <span className="eyebrow text-white reveal justify-center flex">
@@ -31,7 +44,7 @@ export const FAQ = () => (
           <AccordionItem
             key={i}
             value={`item-${i}`}
-            className="reveal glass text-foreground rounded-sm px-6"
+            className="reveal glass-strong text-foreground rounded-sm px-6"
             style={{ transitionDelay: `${i * 40}ms` }}
           >
             <AccordionTrigger className="text-left font-display text-lg md:text-xl uppercase tracking-tight hover:no-underline py-5">

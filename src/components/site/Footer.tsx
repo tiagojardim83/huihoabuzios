@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 import logo from "@/assets/hui-hoa-logo-footer.png";
 
 export const Footer = () => (
-  <footer className="bg-foreground text-background pt-20 pb-10">
+  <footer className="bg-primary text-primary-foreground pt-20 pb-10">
     <div className="container-prose">
       <div className="grid md:grid-cols-12 gap-10 mb-16">
         <div className="md:col-span-7">

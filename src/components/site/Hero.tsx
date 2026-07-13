@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroVideo from "@/assets/hui-hero-2.mp4";
 import sunset from "@/assets/sunset-1.jpg";
@@ -71,14 +71,6 @@ export const Hero = () => {
         </div>
 
       </div>
-
-      <a
-        href="#manifesto"
-        aria-label="Continuar"
-        className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/60 hover:text-white transition-smooth animate-float"
-      >
-        <ChevronDown size={26} />
-      </a>
     </section>
   );
 };
