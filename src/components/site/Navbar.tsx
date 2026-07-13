@@ -22,7 +22,7 @@ const menuLinks = [
   { href: "#competicoes", label: "Competições" },
   { href: "#galeria", label: "Galeria" },
   { href: "#patrocinio", label: "Patrocínio" },
-  { href: "#faq", label: "Perguntas Frequentes" },
+  { href: "#faq", label: "FAQ" },
 ];
 
 export const Navbar = () => {
@@ -126,7 +126,7 @@ export const Navbar = () => {
                   onClick={() => setOpen(false)}
                   className="group flex items-center justify-between py-4"
                 >
-                  <span className="font-display text-3xl uppercase tracking-tight group-hover:text-accent transition-smooth">
+                  <span className="font-display text-2xl uppercase tracking-tight group-hover:text-accent transition-smooth">
                     {l.label}
                   </span>
                   <span className="text-xs tracking-[0.2em] text-background/40 group-hover:text-accent transition-smooth">
