@@ -11,17 +11,18 @@ import frameSunsetRemo from "@/assets/frame-sunset-remo.jpg";
 import luan from "@/assets/luan.jpg";
 
 const photos = [
-  { src: frameCanoa, alt: "Canoa Hui Hoa", aspect: "aspect-[3/4]" },
-  { src: paddling, alt: "Regata Hui Hoa", aspect: "aspect-square" },
-  { src: frameSunsetRemo, alt: "Sunset Hui Hoa", aspect: "aspect-[4/5]" },
-  { src: vitoriaImg, alt: "Equipe Hui Hoa", aspect: "aspect-[4/3]" },
-  { src: huddle, alt: "Unidade Hui Hoa", aspect: "aspect-square" },
-  { src: teamBeach, alt: "Equipe na areia", aspect: "aspect-[4/3]" },
-  { src: hugTeam, alt: "Irmandade Hui Hoa", aspect: "aspect-[3/4]" },
-  { src: frameRemada, alt: "Remada Hui Hoa", aspect: "aspect-[4/5]" },
-  { src: sunset1, alt: "Nascer do sol", aspect: "aspect-square" },
-  { src: luan, alt: "Projeto Kids", aspect: "aspect-[3/4]" },
-  { src: sunset2, alt: "Horizonte", aspect: "aspect-[4/3]" },
+  { src: frameCanoa, alt: "Canoa Hui Hoa" },
+  { src: paddling, alt: "Regata Hui Hoa" },
+  { src: frameSunsetRemo, alt: "Sunset Hui Hoa" },
+  { src: vitoriaImg, alt: "Equipe Hui Hoa" },
+  { src: huddle, alt: "Unidade Hui Hoa" },
+  { src: teamBeach, alt: "Equipe na areia" },
+  { src: hugTeam, alt: "Irmandade Hui Hoa" },
+  { src: frameRemada, alt: "Remada Hui Hoa" },
+  { src: sunset1, alt: "Nascer do sol" },
+  { src: luan, alt: "Projeto Kids" },
+  { src: sunset2, alt: "Horizonte" },
+  { src: frameCanoa, alt: "Ao largo" },
 ];
 
 export const Gallery = () => (
@@ -31,7 +32,7 @@ export const Gallery = () => (
         <span className="eyebrow text-accent reveal">
           <span className="h-px w-8 bg-accent" /> Galeria
         </span>
-        <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-background text-balance">
+        <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
           Frames da nossa remada.
         </h2>
         <p className="reveal mt-4 text-background/60">
@@ -39,11 +40,11 @@ export const Gallery = () => (
         </p>
       </div>
 
-      <div className="columns-2 sm:columns-3 md:columns-4 gap-4 md:gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
         {photos.map((p, i) => (
           <figure
             key={i}
-            className={`reveal group relative overflow-hidden break-inside-avoid mb-4 md:mb-6 ${p.aspect}`}
+            className="reveal group relative overflow-hidden aspect-square"
             style={{ transitionDelay: `${i * 50}ms` }}
           >
             <img
