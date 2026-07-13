@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import { Trophy, Medal, Flag, MapPin, Play } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { Trophy, Medal, Flag, MapPin } from "lucide-react";
 import competitionVideo from "@/assets/competicao.mp4";
 
 const items = [
@@ -35,12 +35,25 @@ const items = [
 
 export const Competitions = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [playing, setPlaying] = useState(false);
 
-  const handlePlay = () => {
-    setPlaying(true);
-    videoRef.current?.play();
-  };
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            el.play().catch(() => {});
+          } else {
+            el.pause();
+          }
+        });
+      },
+      { threshold: 0.4 },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
 
   return (
   <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
@@ -69,26 +82,16 @@ export const Competitions = () => {
           esportiva aos principais campeonatos do Brasil e do exterior.
         </p>
 
-        <div className="reveal relative aspect-video rounded-sm overflow-hidden bg-black">
+        <div className="reveal relative h-[542px] md:h-auto md:aspect-video rounded-sm overflow-hidden bg-black">
           <video
             ref={videoRef}
             src={competitionVideo}
-            controls={playing}
+            muted
+            loop
             playsInline
+            controls
             className="h-full w-full object-cover"
           />
-          {!playing && (
-            <button
-              type="button"
-              onClick={handlePlay}
-              aria-label="Reproduzir vídeo"
-              className="absolute inset-0 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-smooth"
-            >
-              <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary shadow-elegant">
-                <Play size={22} className="ml-0.5" />
-              </span>
-            </button>
-          )}
         </div>
       </div>
 
