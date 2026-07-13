@@ -32,18 +32,18 @@ const items = [
 ];
 
 export const Competitions = () => (
-  <section id="competicoes" className="py-16 md:py-24 bg-background">
+  <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container-prose">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
         <div>
-          <span className="eyebrow text-primary reveal">
-            <span className="h-px w-8 bg-primary" /> Competições
+          <span className="eyebrow text-accent reveal">
+            <span className="h-px w-8 bg-accent" /> Competições
           </span>
           <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
             Evolução em<br />cada remada.
           </h2>
         </div>
-        <p className="reveal max-w-md text-muted-foreground text-lg leading-relaxed">
+        <p className="reveal max-w-md text-primary-foreground/75 text-lg leading-relaxed">
           Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
           nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
           espírito de equipe.
@@ -51,16 +51,16 @@ export const Competitions = () => (
       </div>
 
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
-        <p className="reveal text-foreground/75 text-lg leading-relaxed">
+        <p className="reveal text-primary-foreground/75 text-lg leading-relaxed">
           O Hui Hoa é um clube dedicado à formação de atletas de alta performance na
           canoa havaiana. Com treinos semanais focados em técnica, preparação física e
           desempenho competitivo, desenvolvemos remadores capazes de evoluir da iniciação
           esportiva aos principais campeonatos do Brasil e do exterior.
         </p>
 
-        <div className="reveal relative aspect-video rounded-sm overflow-hidden border border-dashed border-border bg-secondary/40 flex items-center justify-center">
-          <div className="flex flex-col items-center gap-3 text-muted-foreground">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+        <div className="reveal relative aspect-video rounded-sm overflow-hidden border border-dashed border-white/30 bg-white/10 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-3 text-primary-foreground/70">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white text-primary">
               <Play size={22} className="ml-0.5" />
             </span>
             <span className="text-xs tracking-[0.18em] uppercase">Vídeo em breve</span>
@@ -72,7 +72,7 @@ export const Competitions = () => (
         {items.map((it, i) => (
           <article
             key={it.title}
-            className="reveal group relative glass p-7 rounded-sm hover:shadow-elegant hover:-translate-y-1 transition-smooth"
+            className="reveal group relative glass text-foreground p-7 rounded-sm hover:shadow-elegant hover:-translate-y-1 transition-smooth"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="flex items-center justify-between">
