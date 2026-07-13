@@ -8,7 +8,7 @@ import hugTeam from "@/assets/hug-team.jpg";
 import frameCanoa from "@/assets/frame-canoa-buzios.jpg";
 import frameRemada from "@/assets/frame-remada.jpg";
 import frameSunsetRemo from "@/assets/frame-sunset-remo.jpg";
-import kids2 from "@/assets/kids-2.jpg";
+import luan from "@/assets/luan.jpg";
 
 type Tile =
   | { type: "photo"; src: string; alt: string; span: string }
@@ -25,7 +25,7 @@ const tiles: Tile[] = [
   { type: "photo", src: hugTeam, alt: "Irmandade Hui Hoa", span: "md:col-span-3 md:row-span-4" },
   { type: "photo", src: frameRemada, alt: "Remada Hui Hoa", span: "md:col-span-4 md:row-span-3" },
   { type: "photo", src: sunset1, alt: "Nascer do sol", span: "md:col-span-4 md:row-span-3" },
-  { type: "photo", src: kids2, alt: "Projeto Kids", span: "md:col-span-3 md:row-span-3" },
+  { type: "photo", src: luan, alt: "Projeto Kids", span: "md:col-span-3 md:row-span-3" },
   { type: "photo", src: sunset2, alt: "Horizonte", span: "md:col-span-5 md:row-span-3" },
   { type: "photo", src: frameCanoa, alt: "Ao largo", span: "md:col-span-4 md:row-span-3" },
 ];
