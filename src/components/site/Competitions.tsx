@@ -67,6 +67,11 @@ export const Competitions = () => {
             Evolução em<br />cada remada.
           </h2>
           <p className="mt-6 text-primary-foreground/75 text-lg leading-relaxed">
+            Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
+            nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
+            espírito de equipe.
+          </p>
+          <p className="mt-6 text-primary-foreground/75 text-lg leading-relaxed">
             O Hui Hoa é um clube dedicado à formação de atletas de alta performance na
             canoa havaiana. Com treinos semanais focados em técnica, preparação física e
             desempenho competitivo, desenvolvemos remadores capazes de evoluir da iniciação
@@ -74,24 +79,16 @@ export const Competitions = () => {
           </p>
         </div>
 
-        <div className="reveal flex flex-col lg:h-full">
-          <p className="text-primary-foreground/75 text-lg leading-relaxed">
-            Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
-            nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
-            espírito de equipe.
-          </p>
-
-          <div className="relative mt-6 h-[542px] lg:h-auto lg:flex-1 rounded-sm overflow-hidden bg-black">
-            <video
-              ref={videoRef}
-              src={competitionVideo}
-              muted
-              loop
-              playsInline
-              controls
-              className="h-full w-full object-cover"
-            />
-          </div>
+        <div className="reveal relative h-[542px] lg:h-full rounded-sm overflow-hidden bg-black">
+          <video
+            ref={videoRef}
+            src={competitionVideo}
+            muted
+            loop
+            playsInline
+            controls
+            className="h-full w-full object-cover"
+          />
         </div>
       </div>
 
