@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Menu, X, Instagram, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/hui-hoa-logo.png";
-import logoFooter from "@/assets/hui-hoa-logo-footer.png";
 
 const links = [
   { href: "#historia", label: "História" },
@@ -143,8 +142,7 @@ export const Navbar = () => {
               </a>
             </Button>
 
-            <div className="flex items-center justify-between pt-2">
-              <img src={logoFooter} alt="Hui Hoa Búzios" className="h-8 w-auto opacity-70" />
+            <div className="flex items-center justify-end pt-2">
               <a
                 href="https://www.instagram.com/huihoa_buzios/"
                 target="_blank"
