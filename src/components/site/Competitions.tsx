@@ -58,40 +58,40 @@ export const Competitions = () => {
   return (
   <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container-prose">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-4">
-        <div>
-          <span className="eyebrow text-accent reveal">
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
+        <div className="reveal flex flex-col">
+          <span className="eyebrow text-accent">
             <span className="h-px w-8 bg-accent" /> Competições
           </span>
-          <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
+          <h2 className="font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
             Evolução em<br />cada remada.
           </h2>
+          <p className="mt-6 text-primary-foreground/75 text-lg leading-relaxed">
+            O Hui Hoa é um clube dedicado à formação de atletas de alta performance na
+            canoa havaiana. Com treinos semanais focados em técnica, preparação física e
+            desempenho competitivo, desenvolvemos remadores capazes de evoluir da iniciação
+            esportiva aos principais campeonatos do Brasil e do exterior.
+          </p>
         </div>
-        <p className="reveal max-w-md text-primary-foreground/75 text-lg leading-relaxed">
-          Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
-          nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
-          espírito de equipe.
-        </p>
-      </div>
 
-      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
-        <p className="reveal text-primary-foreground/75 text-lg leading-relaxed">
-          O Hui Hoa é um clube dedicado à formação de atletas de alta performance na
-          canoa havaiana. Com treinos semanais focados em técnica, preparação física e
-          desempenho competitivo, desenvolvemos remadores capazes de evoluir da iniciação
-          esportiva aos principais campeonatos do Brasil e do exterior.
-        </p>
+        <div className="reveal flex flex-col lg:h-full">
+          <p className="text-primary-foreground/75 text-lg leading-relaxed">
+            Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
+            nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
+            espírito de equipe.
+          </p>
 
-        <div className="reveal relative h-[542px] md:h-auto md:aspect-video rounded-sm overflow-hidden bg-black">
-          <video
-            ref={videoRef}
-            src={competitionVideo}
-            muted
-            loop
-            playsInline
-            controls
-            className="h-full w-full object-cover"
-          />
+          <div className="relative mt-6 h-[542px] lg:h-auto lg:flex-1 rounded-sm overflow-hidden bg-black">
+            <video
+              ref={videoRef}
+              src={competitionVideo}
+              muted
+              loop
+              playsInline
+              controls
+              className="h-full w-full object-cover"
+            />
+          </div>
         </div>
       </div>
 
