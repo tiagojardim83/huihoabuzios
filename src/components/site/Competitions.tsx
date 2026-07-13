@@ -58,7 +58,7 @@ export const Competitions = () => {
   return (
   <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container-prose">
-      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-4">
         <div>
           <span className="eyebrow text-accent reveal">
             <span className="h-px w-8 bg-accent" /> Competições
