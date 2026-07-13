@@ -99,21 +99,21 @@ export const Competitions = () => {
         {items.map((it, i) => (
           <article
             key={it.title}
-            className="reveal group relative glass text-foreground p-7 rounded-sm hover:shadow-elegant hover:-translate-y-1 transition-smooth"
+            className="reveal group relative border border-white/30 bg-transparent p-7 rounded-sm hover:border-white hover:-translate-y-1 transition-smooth"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="flex items-center justify-between">
               <span className="text-[10px] tracking-[0.2em] uppercase text-accent font-semibold">
                 {it.tag}
               </span>
-              <it.icon size={20} className="text-primary" />
+              <it.icon size={20} className="text-white" />
             </div>
-            <h3 className="font-display text-xl md:text-2xl mt-8 uppercase leading-tight">
+            <h3 className="font-display text-xl md:text-2xl mt-8 uppercase leading-tight text-white">
               {it.title}
             </h3>
-            <div className="mt-6 pt-6 border-t border-border">
-              <div className="text-sm text-foreground">{it.result}</div>
-              <div className="text-xs text-muted-foreground mt-1">{it.year}</div>
+            <div className="mt-6 pt-6 border-t border-white/20">
+              <div className="text-sm text-white">{it.result}</div>
+              <div className="text-xs text-primary-foreground/60 mt-1">{it.year}</div>
             </div>
           </article>
         ))}
