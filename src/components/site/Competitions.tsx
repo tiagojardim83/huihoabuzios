@@ -43,7 +43,7 @@ export const Competitions = () => (
             Evolução em<br />cada remada.
           </h2>
         </div>
-        <p className="reveal max-w-md text-muted-foreground">
+        <p className="reveal max-w-md text-muted-foreground text-lg leading-relaxed">
           Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos
           nacionais e internacionais, carregamos nossa cidade com orgulho, disciplina e
           espírito de equipe.
