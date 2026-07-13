@@ -1,4 +1,4 @@
-import { Trophy, Medal, Flag, MapPin } from "lucide-react";
+import { Trophy, Medal, Flag, MapPin, Play } from "lucide-react";
 
 const items = [
   {
@@ -47,6 +47,23 @@ export const Competitions = () => (
           Do Rio de Janeiro aos circuitos internacionais, levamos o nome de Búzios para
           onde a canoa nos leva.
         </p>
+      </div>
+
+      <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-16">
+        <p className="reveal text-foreground/75 text-lg leading-relaxed">
+          O Hui Hoa é um clube que prepara o atleta para competições. Treinos semanais
+          focados em técnica e desempenho dentro d'água elevam o nível de cada remador,
+          da base aos circuitos nacionais e internacionais.
+        </p>
+
+        <div className="reveal relative aspect-video rounded-sm overflow-hidden border border-dashed border-border bg-secondary/40 flex items-center justify-center">
+          <div className="flex flex-col items-center gap-3 text-muted-foreground">
+            <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <Play size={22} className="ml-0.5" />
+            </span>
+            <span className="text-xs tracking-[0.18em] uppercase">Vídeo em breve</span>
+          </div>
+        </div>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
