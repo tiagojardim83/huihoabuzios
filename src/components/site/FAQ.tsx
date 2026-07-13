@@ -30,8 +30,8 @@ export const FAQ = () => (
     </div>
 
     <div className="container-prose max-w-3xl">
-      <div className="text-center mb-14">
-        <span className="eyebrow text-white reveal justify-center flex">
+      <div className="mb-14">
+        <span className="eyebrow text-white reveal">
           <span className="h-px w-8 bg-white" /> Perguntas Frequentes
         </span>
         <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
@@ -44,13 +44,13 @@ export const FAQ = () => (
           <AccordionItem
             key={i}
             value={`item-${i}`}
-            className="reveal glass-strong text-foreground rounded-sm px-6"
+            className="reveal glass text-foreground rounded-sm px-6"
             style={{ transitionDelay: `${i * 40}ms` }}
           >
             <AccordionTrigger className="text-left font-display text-lg md:text-xl uppercase tracking-tight hover:no-underline py-5">
               {f.q}
             </AccordionTrigger>
-            <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+            <AccordionContent className="text-foreground leading-relaxed pb-6">
               {f.a}
             </AccordionContent>
           </AccordionItem>
