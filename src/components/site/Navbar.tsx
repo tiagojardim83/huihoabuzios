@@ -92,7 +92,7 @@ export const Navbar = () => {
 
       {/* Premium full-screen mobile menu */}
       <div
-        className={`lg:hidden fixed inset-0 z-40 bg-foreground text-background overflow-hidden transition-all duration-500 ease-smooth ${
+        className={`lg:hidden fixed inset-0 z-40 bg-primary text-primary-foreground overflow-hidden transition-all duration-500 ease-smooth ${
           open ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
         aria-hidden={!open}
