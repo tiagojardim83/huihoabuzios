@@ -60,7 +60,7 @@ export const Hero = () => {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <Button asChild variant="ember" size="xl" className="w-full sm:w-auto min-w-[11rem]">
-              <a href="https://wa.me/5522988392494" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5522998796337" target="_blank" rel="noopener noreferrer">
                 Comece a Remar <ArrowRight size={18} />
               </a>
             </Button>

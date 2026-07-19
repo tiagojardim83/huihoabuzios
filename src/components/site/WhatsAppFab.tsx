@@ -2,7 +2,7 @@ import whatsappIcon from "@/assets/whatsapp-icon-white.png";
 
 export const WhatsAppFab = () => (
   <a
-    href="https://wa.me/5522988392494?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Hui%20Hoa."
+    href="https://wa.me/5522998796337?text=Ol%C3%A1!%20Quero%20saber%20mais%20sobre%20o%20Hui%20Hoa."
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Falar no WhatsApp"

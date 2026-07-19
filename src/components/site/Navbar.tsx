@@ -86,7 +86,7 @@ export const Navbar = () => {
 
         <div className="hidden lg:block">
           <Button asChild variant={dark ? "onDark" : "hero"} size="default">
-            <a href="https://wa.me/5522988392494" target="_blank" rel="noopener noreferrer">Quero Remar</a>
+            <a href="https://wa.me/5522998796337" target="_blank" rel="noopener noreferrer">Quero Remar</a>
           </Button>
         </div>
 
@@ -145,7 +145,7 @@ export const Navbar = () => {
           >
             <Button asChild variant="ember" size="xl" className="w-full">
               <a
-                href="https://wa.me/5522988392494"
+                href="https://wa.me/5522998796337"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
