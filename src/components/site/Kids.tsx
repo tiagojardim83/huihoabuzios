@@ -3,13 +3,13 @@ import { Button } from "@/components/ui/button";
 import kidsImg from "@/assets/kids-2.jpg";
 
 export const Kids = () => (
-  <section id="kids" className="py-16 md:py-24 bg-secondary/50">
-    <div className="container-prose grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+  <section id="kids" className="section-air bg-secondary/50">
+    <div className="section-air-grid container-prose grid lg:grid-cols-2 items-center">
       <div className="reveal order-2 lg:order-1">
-        <span className="eyebrow text-accent">
-          <span className="h-px w-8 bg-accent" /> Projeto Kids · Gratuito
+        <span className="eyebrow eyebrow-numbered text-accent">
+          <span className="eyebrow-number">04</span> Projeto Kids · Gratuito
         </span>
-        <h2 className="font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
+        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl mt-6 uppercase text-balance">
           Formando<br />
           <span className="text-primary">atletas</span> e{" "}
           <span className="text-accent">cidadãos.</span>
@@ -34,7 +34,7 @@ export const Kids = () => (
       </div>
 
       <div className="reveal order-1 lg:order-2 relative">
-        <div className="relative overflow-hidden rounded-sm shadow-elegant">
+        <div className="photo-frame media-outline relative overflow-hidden">
           <img
             src={kidsImg}
             alt="Crianças do Projeto Kids Hui Hoa Búzios"
@@ -42,9 +42,9 @@ export const Kids = () => (
             className="w-full h-auto object-cover photo-levels"
           />
         </div>
-        <div className="absolute -bottom-6 -left-6 bg-primary text-primary-foreground p-5 shadow-elegant hidden md:block">
-          <div className="text-[11px] tracking-[0.2em] uppercase opacity-80">Todo sábado</div>
-          <div className="font-display text-2xl mt-1">Praia do Canto · 8h</div>
+        <div className="kids-schedule card-outline">
+          <div className="kids-schedule-label">Todo sábado</div>
+          <div className="kids-schedule-value">Praia do Canto · 8h</div>
         </div>
       </div>
     </div>

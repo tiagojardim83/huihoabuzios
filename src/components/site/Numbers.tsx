@@ -17,8 +17,8 @@ export const Numbers = () => (
     <div className="container-prose relative">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
         <div>
-          <span className="eyebrow text-accent reveal">
-            <span className="h-px w-8 bg-accent" /> Nossos Números
+          <span className="eyebrow eyebrow-numbered text-accent reveal">
+            <span className="eyebrow-number">02</span> Nossos Números
           </span>
           <h2 className="reveal font-display text-4xl md:text-6xl mt-6 text-balance uppercase">
             Prova de<br />consistência.
@@ -30,11 +30,11 @@ export const Numbers = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/10 border border-white/10 rounded-sm overflow-hidden">
+      <div className="number-grid grid-cols-2 md:grid-cols-3">
         {cards.map((c, i) => (
           <div
             key={c.label}
-            className="reveal bg-primary p-8 md:p-10 hover:bg-primary-deep transition-smooth"
+            className="number-card reveal p-8 md:p-10"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="font-display text-5xl md:text-7xl leading-none">

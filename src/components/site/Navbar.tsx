@@ -44,17 +44,15 @@ export const Navbar = () => {
     return () => window.removeEventListener("keydown", onKey);
   }, [open]);
 
-  const dark = !scrolled && !open;
-
   return (
     <>
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-smooth ${
-          scrolled || open ? "bg-background/85 backdrop-blur-xl border-b border-border" : "bg-transparent"
+          scrolled || open ? "bg-primary border-b border-white/20" : "bg-transparent"
         }`}
       >
       <nav
-        className="container-prose flex items-center justify-between h-16 md:h-20"
+        className="container-prose flex h-[72px] md:h-[88px] items-center justify-between"
         aria-label="Navegação principal"
       >
         <a
@@ -69,14 +67,12 @@ export const Navbar = () => {
           />
         </a>
 
-        <ul className="hidden lg:flex items-center gap-7">
+        <ul className="hidden lg:flex items-center gap-8">
           {links.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
-                className={`text-[13px] font-medium tracking-wide transition-smooth ${
-                  dark ? "text-white/85 hover:text-white" : "text-foreground/75 hover:text-foreground"
-                }`}
+                className="text-[13px] font-medium tracking-wide text-white/85 hover:text-white transition-smooth"
               >
                 {l.label}
               </a>
@@ -85,13 +81,13 @@ export const Navbar = () => {
         </ul>
 
         <div className="hidden lg:block">
-          <Button asChild variant={dark ? "onDark" : "hero"} size="default">
+          <Button asChild variant="onDark" size="default" className="border-white bg-transparent backdrop-blur-none">
             <a href="https://wa.me/5522998796337" target="_blank" rel="noopener noreferrer">Quero Remar</a>
           </Button>
         </div>
 
         <button
-          className={`lg:hidden relative z-10 p-2 transition-smooth ${dark ? "text-white" : "text-foreground"}`}
+          className="lg:hidden relative z-10 p-2 text-white transition-smooth"
           onClick={() => setOpen(!open)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}

@@ -11,12 +11,12 @@ const perks = [
 ];
 
 export const Sponsorship = () => (
-  <section id="patrocinio" className="py-16 md:py-24 bg-background">
+  <section id="patrocinio" className="section-air bg-background">
     <div className="container-prose">
-      <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-        <div className="lg:col-span-6">
-          <span className="eyebrow text-primary reveal">
-            <span className="h-px w-8 bg-primary" /> Patrocínio
+        <div className="section-air-grid grid lg:grid-cols-2 items-center">
+          <div>
+          <span className="eyebrow eyebrow-numbered text-primary reveal">
+            <span className="eyebrow-number">07</span> Patrocínio
           </span>
           <h2 className="reveal font-display text-4xl md:text-6xl lg:text-7xl mt-6 uppercase text-balance">
             Sua marca<br />
@@ -29,7 +29,7 @@ export const Sponsorship = () => (
           </p>
 
           <div className="reveal mt-10">
-            <Button asChild variant="hero" size="xl" className="min-w-[11rem]">
+            <Button asChild variant="hero" size="xl" className="w-full sm:w-auto min-w-[11rem]">
               <a href="#contato">
                 Apoiar o Hui Hoa <ArrowRight size={18} />
               </a>
@@ -37,10 +37,10 @@ export const Sponsorship = () => (
           </div>
         </div>
 
-        <div className="lg:col-span-6">
+          <div>
           <div className="reveal grid sm:grid-cols-2 gap-3">
             {perks.map((p) => (
-              <div key={p} className="glass rounded-sm p-6 flex items-center gap-3">
+              <div key={p} className="card-outline card-outline-interactive p-6 flex items-center gap-3">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-accent/10 text-accent">
                   <Check size={16} strokeWidth={3} />
                 </span>
@@ -49,7 +49,7 @@ export const Sponsorship = () => (
             ))}
           </div>
 
-          <div className="reveal mt-8 p-8 bg-gradient-royal text-primary-foreground rounded-sm">
+          <div className="sponsor-highlight reveal mt-8 p-8 text-primary-foreground">
             <div className="font-display text-3xl uppercase tracking-tight">
               +60 mil visualizações mensais
             </div>

@@ -1,47 +1,100 @@
-import { Instagram } from "lucide-react";
+import { ArrowUpRight, Instagram, Mail } from "lucide-react";
 import logo from "@/assets/hui-hoa-logo-footer.png";
 
+const footerLinks = [
+  { href: "#historia", label: "História" },
+  { href: "#experiencia", label: "Experiência" },
+  { href: "#kids", label: "Projeto Kids" },
+  { href: "#galeria", label: "Galeria" },
+  { href: "#patrocinio", label: "Patrocínio" },
+];
+
+const marqueeItems = Array.from({ length: 4 }, (_, index) => (
+  <span className="footer-marquee-item" key={index}>
+    Canoa Havaiana <span aria-hidden="true">✦</span>
+  </span>
+));
+
 export const Footer = () => (
-  <footer className="bg-primary text-primary-foreground pt-20 pb-10">
-    <div className="container-prose">
-      <div className="grid md:grid-cols-12 gap-10 mb-16">
-        <div className="md:col-span-7">
-          <img
-            src={logo}
-            alt="Hui Hoa Búzios"
-            loading="lazy"
-            className="h-12 md:h-14 w-auto"
-          />
-          <p className="mt-4 max-w-md text-background/90 text-sm leading-relaxed">
-            Equipe de canoa havaiana de Búzios. Comunidade, performance e oceano — desde 2018.
+  <footer className="site-footer">
+    <div className="footer-intro container-prose">
+      <div className="footer-kicker">
+        <span>Hui Hoa Búzios</span>
+        <span>Desde 2018</span>
+      </div>
+
+      <div className="footer-intro-grid">
+        <h2 className="footer-heading text-balance">
+          O mar é o nosso<br />ponto de encontro.
+        </h2>
+
+        <div className="footer-cta">
+          <p>
+            Comunidade, performance e oceano. Venha remar com a gente na Praia do Canto,
+            em Búzios.
           </p>
           <a
-            href="https://www.instagram.com/huihoa_buzios/"
+            href="https://wa.me/5522998796337"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Instagram"
-            className="mt-6 flex h-10 w-10 items-center justify-center rounded-full bg-background/10 hover:bg-accent hover:text-accent-foreground transition-smooth"
+            className="footer-primary-link"
           >
-            <Instagram size={18} />
+            Quero remar <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>
-
-        <div className="md:col-span-5">
-          <h3 className="text-xs tracking-[0.2em] uppercase text-background/85 mb-4">Explore</h3>
-          <ul className="space-y-2 text-sm">
-            <li><a href="#historia" className="hover:text-accent transition-smooth">História</a></li>
-            <li><a href="#experiencia" className="hover:text-accent transition-smooth">Experiência</a></li>
-            <li><a href="#kids" className="hover:text-accent transition-smooth">Projeto Kids</a></li>
-            <li><a href="#galeria" className="hover:text-accent transition-smooth">Galeria</a></li>
-            <li><a href="#patrocinio" className="hover:text-accent transition-smooth">Patrocínio</a></li>
-          </ul>
-        </div>
       </div>
+    </div>
 
-      <div className="border-t border-background/15 pt-8 flex flex-col sm:flex-row justify-between gap-4 text-xs text-background/85">
-        <p>© {new Date().getFullYear()} Hui Hoa Búzios. Todos os direitos reservados.</p>
-        <p>Feito com sal, sol e coração.</p>
+    <div className="footer-marquee" aria-label="Canoa Havaiana">
+      <div className="footer-marquee-track">
+        <div className="footer-marquee-group">{marqueeItems}</div>
+        <div className="footer-marquee-group" aria-hidden="true">{marqueeItems}</div>
       </div>
+    </div>
+
+    <div className="footer-navigation container-prose">
+      <nav aria-label="Navegação do rodapé">
+        <span className="footer-label">Explore</span>
+        <ul className="footer-links">
+          {footerLinks.map((link) => (
+            <li key={link.href}>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <div className="footer-contact">
+        <span className="footer-label">Fale com a gente</span>
+        <a href="mailto:huihoabuzios@gmail.com">
+          <Mail size={16} aria-hidden="true" /> huihoabuzios@gmail.com
+        </a>
+        <a
+          href="https://www.instagram.com/huihoa_buzios/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Instagram size={16} aria-hidden="true" /> @huihoa_buzios
+        </a>
+      </div>
+    </div>
+
+    <div className="footer-brand" aria-hidden="true">
+      <img src={logo} alt="" loading="lazy" />
+    </div>
+
+    <div className="footer-bottom container-prose">
+      <p>© {new Date().getFullYear()} Hui Hoa Búzios</p>
+      <a
+        href="https://tgarden.com.br/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="footer-credit"
+      >
+        Webdesign: TGarden_Studio
+      </a>
+      <p className="footer-location">Praia do Canto · Armação dos Búzios · RJ</p>
+      <a href="#top">Voltar ao topo ↑</a>
     </div>
   </footer>
 );

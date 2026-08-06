@@ -4,7 +4,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import sunset from "@/assets/sunset-1.jpg";
 
 const faqs = [
   { q: "Quem pode remar?", a: "Qualquer pessoa maior de 12 anos com disposição para se aventurar no mar. Recebemos iniciantes e atletas experientes." },
@@ -16,46 +15,45 @@ const faqs = [
 ];
 
 export const FAQ = () => (
-  <section id="faq" className="relative isolate py-16 md:py-24 text-accent-foreground overflow-hidden">
-    <div className="absolute inset-0 -z-10">
-      <img
-        src={sunset}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        className="h-full w-full object-cover photo-levels"
-      />
-      <div className="absolute inset-0 bg-accent/80 mix-blend-multiply" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40" />
-    </div>
+  <section id="faq" className="faq-premium">
+    <div className="container-prose">
+      <div className="faq-layout">
+        <div className="faq-intro">
+          <span className="eyebrow eyebrow-numbered text-accent reveal">
+            <span className="eyebrow-number">08</span> Perguntas Frequentes
+          </span>
+          <h2 className="faq-title reveal text-balance">
+            Antes de<br />molhar o remo.
+          </h2>
+          <p className="faq-description reveal">
+            Tudo o que você precisa saber antes de viver sua primeira experiência com o Hui Hoa.
+          </p>
+          <a className="faq-contact-link reveal" href="#contato">
+            Ainda com dúvidas? Fale com a equipe <span aria-hidden="true">↗</span>
+          </a>
+        </div>
 
-    <div className="container-prose max-w-3xl">
-      <div className="mb-14">
-        <span className="eyebrow text-white reveal">
-          <span className="h-px w-8 bg-white" /> Perguntas Frequentes
-        </span>
-        <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
-          Antes de<br />molhar o remo.
-        </h2>
+        <Accordion type="single" collapsible defaultValue="item-0" className="faq-list">
+          {faqs.map((faq, index) => (
+            <AccordionItem
+              key={faq.q}
+              value={`item-${index}`}
+              className="faq-item reveal"
+              style={{ transitionDelay: `${index * 45}ms` }}
+            >
+              <AccordionTrigger className="faq-trigger hover:no-underline">
+                <span className="faq-question">
+                  <span className="faq-question-number">{String(index + 1).padStart(2, "0")}</span>
+                  <span className="faq-question-text">{faq.q}</span>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="faq-answer">
+                {faq.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
       </div>
-
-      <Accordion type="single" collapsible className="space-y-3">
-        {faqs.map((f, i) => (
-          <AccordionItem
-            key={i}
-            value={`item-${i}`}
-            className="reveal glass text-foreground rounded-sm px-6"
-            style={{ transitionDelay: `${i * 40}ms` }}
-          >
-            <AccordionTrigger className="text-left font-display text-lg md:text-xl uppercase tracking-tight hover:no-underline py-5">
-              {f.q}
-            </AccordionTrigger>
-            <AccordionContent className="text-foreground leading-relaxed pb-6">
-              {f.a}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
     </div>
   </section>
 );

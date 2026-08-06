@@ -9,7 +9,7 @@ export const WhatsAppFab = () => (
     className="fixed bottom-5 right-5 md:bottom-7 md:right-7 z-40 group"
   >
     <span className="absolute inset-0 rounded-full bg-accent/40 animate-ping" />
-    <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground shadow-elegant hover:scale-110 transition-transform">
+    <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-accent text-accent-foreground hover:scale-110 transition-transform">
       <img
         src={whatsappIcon}
         alt="WhatsApp"

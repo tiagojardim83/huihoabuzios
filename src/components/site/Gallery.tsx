@@ -29,8 +29,8 @@ export const Gallery = () => (
   <section id="galeria" className="py-16 md:py-24 bg-foreground text-background">
     <div className="container-prose">
       <div className="mb-14">
-        <span className="eyebrow text-accent reveal">
-          <span className="h-px w-8 bg-accent" /> Galeria
+        <span className="eyebrow eyebrow-numbered text-accent reveal">
+          <span className="eyebrow-number">06</span> Galeria
         </span>
         <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
           Frames da nossa remada.
@@ -44,7 +44,7 @@ export const Gallery = () => (
         {photos.map((p, i) => (
           <figure
             key={i}
-            className="reveal group relative overflow-hidden aspect-square"
+            className="photo-frame media-outline media-outline-dark reveal group relative overflow-hidden aspect-[3/5]"
             style={{ transitionDelay: `${i * 50}ms` }}
           >
             <img

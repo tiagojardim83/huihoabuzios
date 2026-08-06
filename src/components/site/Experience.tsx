@@ -25,41 +25,49 @@ const items = [
 ];
 
 export const Experience = () => (
-  <section id="experiencia" className="relative bg-background">
-    <div className="relative h-[55vh] min-h-[380px] overflow-hidden">
+  <section id="experiencia" className="experience-premium">
+    <div className="experience-visual">
       <img
         src={bg}
         alt="Canoa Hui Hoa remando no mar de Búzios ao entardecer"
         loading="lazy"
         className="h-full w-full object-cover photo-levels"
       />
-      <div className="absolute inset-0 bg-black/45" />
-      <div className="absolute inset-0 flex items-center">
-        <div className="container-prose">
-          <span className="eyebrow text-accent reveal">
-            <span className="h-px w-8 bg-accent" /> Experiência
-          </span>
-          <h2 className="reveal font-display text-white text-5xl md:text-7xl lg:text-8xl mt-6 max-w-4xl uppercase text-balance">
-            Muito mais<br />que remar.
+      <div className="experience-image-overlay" />
+
+      <div className="experience-hero-content container-prose">
+        <span className="eyebrow eyebrow-numbered text-accent reveal">
+          <span className="eyebrow-number">03</span> Experiência
+        </span>
+        <div className="experience-title-row">
+          <h2 className="experience-title reveal font-display text-4xl md:text-6xl lg:text-7xl uppercase text-balance">
+            <span>Muito mais</span>
+            <span>que remar.</span>
           </h2>
+          <p className="experience-lead reveal">
+            Corpo, técnica e comunidade em conexão constante com o oceano.
+          </p>
         </div>
       </div>
     </div>
 
-    <div className="container-prose -mt-24 relative z-10 pb-24 md:pb-36">
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border rounded-sm overflow-hidden shadow-elegant">
-        {items.map((it, i) => (
-          <div
-            key={it.title}
-            className="reveal group glass p-8 md:p-10 hover:bg-foreground hover:text-background transition-smooth"
-            style={{ transitionDelay: `${i * 80}ms` }}
+    <div className="experience-panel-wrap container-prose">
+      <div className="experience-panel">
+        {items.map((item, index) => (
+          <article
+            key={item.title}
+            className="experience-pillar reveal"
+            style={{ transitionDelay: `${index * 80}ms` }}
           >
-            <it.icon size={28} className="text-primary group-hover:text-accent transition-smooth" />
-            <h3 className="font-display text-2xl mt-6 uppercase tracking-tight">{it.title}</h3>
-            <p className="mt-3 text-sm text-muted-foreground group-hover:text-background/70 leading-relaxed">
-              {it.desc}
-            </p>
-          </div>
+            <div className="experience-pillar-top">
+              <span className="experience-icon">
+                <item.icon size={22} aria-hidden="true" />
+              </span>
+              <span className="experience-index">{String(index + 1).padStart(2, "0")}</span>
+            </div>
+            <h3>{item.title}</h3>
+            <p>{item.desc}</p>
+          </article>
         ))}
       </div>
     </div>

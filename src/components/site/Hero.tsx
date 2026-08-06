@@ -19,7 +19,7 @@ export const Hero = () => {
   }, []);
 
   return (
-    <section id="top" className="relative isolate min-h-[90svh] w-full overflow-hidden text-white">
+    <section id="top" className="relative isolate min-h-[100svh] w-full overflow-hidden text-white">
       {/* Background video with image poster fallback */}
       <div className="absolute inset-0 z-0">
         <video
@@ -41,11 +41,9 @@ export const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/85" />
       </div>
 
-      <div className="container-prose relative z-10 flex min-h-[90svh] flex-col justify-end pb-10 md:pb-16 pt-28">
+      <div className="container-prose relative z-10 flex min-h-[100svh] flex-col justify-end pb-16 pt-32 md:pb-24 md:pt-36 lg:pb-28">
         <div className="max-w-4xl">
-          <span className="eyebrow text-accent">
-            <span className="h-px w-8 bg-accent" /> Hui Hoa Búzios · Desde 2018
-          </span>
+          <span className="eyebrow text-accent">Hui Hoa Búzios · Desde 2018</span>
 
           <h1 className="text-display mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-[9.5rem] text-white text-balance">
             Remar é apenas

@@ -60,8 +60,8 @@ export const Competitions = () => {
     <div className="container-prose">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
         <div className="reveal flex flex-col">
-          <span className="eyebrow text-accent">
-            <span className="h-px w-8 bg-accent" /> Competições
+          <span className="eyebrow eyebrow-numbered text-accent">
+            <span className="eyebrow-number">05</span> Competições
           </span>
           <h2 className="font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
             Evolução em<br />cada remada.
@@ -79,7 +79,7 @@ export const Competitions = () => {
           </p>
         </div>
 
-        <div className="reveal relative h-[542px] lg:h-full rounded-sm overflow-hidden bg-black">
+        <div className="photo-frame media-outline media-outline-dark reveal relative h-[542px] lg:h-full overflow-hidden bg-black">
           <video
             ref={videoRef}
             src={competitionVideo}
@@ -96,7 +96,7 @@ export const Competitions = () => {
         {items.map((it, i) => (
           <article
             key={it.title}
-            className="reveal group relative border border-white/30 bg-transparent p-7 rounded-sm hover:border-white hover:-translate-y-1 transition-smooth"
+            className="card-outline card-outline-dark card-outline-interactive reveal group relative p-7"
             style={{ transitionDelay: `${i * 60}ms` }}
           >
             <div className="flex items-center justify-between">

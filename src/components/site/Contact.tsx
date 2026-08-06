@@ -30,11 +30,11 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contato" className="py-16 md:py-24 bg-background">
-      <div className="container-prose grid lg:grid-cols-5 gap-12 lg:gap-20">
+    <section id="contato" className="pt-16 md:pt-24 bg-background">
+      <div className="container-prose grid lg:grid-cols-5 gap-12 lg:gap-20 pb-16 md:pb-24">
         <div className="lg:col-span-2">
-          <span className="eyebrow text-primary reveal">
-            <span className="h-px w-8 bg-primary" /> Contato
+          <span className="eyebrow eyebrow-numbered text-primary reveal">
+            <span className="eyebrow-number">09</span> Contato
           </span>
           <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
             Vamos<br />conversar?
@@ -45,7 +45,7 @@ export const Contact = () => {
 
           <ul className="reveal mt-10 space-y-5">
             <li className="flex items-start gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
+              <span className="contact-icon flex h-11 w-11 items-center justify-center text-primary">
                 <span
                   role="img"
                   aria-label="WhatsApp"
@@ -85,7 +85,7 @@ export const Contact = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
+              <span className="contact-icon flex h-11 w-11 items-center justify-center text-primary">
                 <Instagram size={18} />
               </span>
               <div>
@@ -101,7 +101,7 @@ export const Contact = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
+              <span className="contact-icon flex h-11 w-11 items-center justify-center text-primary">
                 <Mail size={18} />
               </span>
               <div>
@@ -112,7 +112,7 @@ export const Contact = () => {
               </div>
             </li>
             <li className="flex items-start gap-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-sm bg-primary/10 text-primary">
+              <span className="contact-icon flex h-11 w-11 items-center justify-center text-primary">
                 <MapPin size={18} />
               </span>
               <div>
@@ -122,19 +122,11 @@ export const Contact = () => {
             </li>
           </ul>
 
-          <div className="reveal mt-8 overflow-hidden rounded-sm border border-border aspect-[4/3]">
-            <iframe
-              title="Localização Hui Hoa Búzios"
-              src="https://www.google.com/maps?q=Praia+do+Canto+Armação+dos+Búzios+RJ&output=embed"
-              loading="lazy"
-              className="h-full w-full grayscale hover:grayscale-0 transition-all duration-700"
-            />
-          </div>
         </div>
 
         <form
           onSubmit={onSubmit}
-          className="reveal lg:col-span-3 glass rounded-sm p-8 md:p-12 shadow-soft h-fit"
+          className="card-outline reveal lg:col-span-3 p-8 md:p-12 h-fit"
           noValidate
         >
           <div className="grid sm:grid-cols-2 gap-5">
@@ -170,6 +162,15 @@ export const Contact = () => {
             Ao enviar, você será redirecionado para o WhatsApp da equipe Hui Hoa Búzios.
           </p>
         </form>
+      </div>
+
+      <div className="contact-map media-outline reveal overflow-hidden">
+        <iframe
+          title="Localização Hui Hoa Búzios"
+          src="https://www.google.com/maps?q=Praia+do+Canto+Armação+dos+Búzios+RJ&output=embed"
+          loading="lazy"
+          className="h-full w-full grayscale hover:grayscale-0 transition-all duration-700"
+        />
       </div>
     </section>
   );
