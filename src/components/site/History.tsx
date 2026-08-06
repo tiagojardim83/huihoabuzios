@@ -56,9 +56,10 @@ export const History = () => {
         <header className="history-intro">
           <div>
             <span className="eyebrow text-primary reveal">Nossa História</span>
-            <h2 className="history-heading reveal font-display uppercase text-balance">
-              Uma equipe.<br />Um oceano.<br />
-              <span>Uma comunidade.</span>
+            <h2 className="history-heading reveal font-display uppercase">
+              <span className="history-heading-line">Uma equipe.</span>
+              <span className="history-heading-line">Um oceano.</span>
+              <span className="history-heading-line history-heading-accent">Uma comunidade.</span>
             </h2>
           </div>
 

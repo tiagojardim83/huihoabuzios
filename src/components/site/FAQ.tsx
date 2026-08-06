@@ -22,8 +22,10 @@ export const FAQ = () => (
           <span className="eyebrow eyebrow-numbered text-accent reveal">
             <span className="eyebrow-number">08</span> Perguntas Frequentes
           </span>
-          <h2 className="faq-title reveal text-balance">
-            Antes de<br />molhar o remo.
+          <h2 className="faq-title reveal">
+            <span>Antes de</span>
+            <span>molhar</span>
+            <span>o remo.</span>
           </h2>
           <p className="faq-description reveal">
             Tudo o que você precisa saber antes de viver sua primeira experiência com o Hui Hoa.

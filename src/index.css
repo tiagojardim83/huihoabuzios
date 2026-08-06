@@ -307,14 +307,23 @@
 }
 
 .history-heading {
-  max-width: 12ch;
   margin-top: 2rem;
-  font-size: clamp(3rem, 6.5vw, 6.5rem);
+  font-size: clamp(3rem, 4.8vw, 5.75rem);
   line-height: 0.94;
 }
 
-.history-heading > span {
+.history-heading-line {
+  display: block;
+}
+
+.history-heading-accent {
   color: hsl(var(--primary));
+}
+
+@media (min-width: 900px) {
+  .history-heading-line {
+    white-space: nowrap;
+  }
 }
 
 .history-intro-copy {
@@ -829,13 +838,17 @@
 
 .faq-title {
   margin-top: 2rem;
-  max-width: 9ch;
   font-family: 'Archivo', system-ui, sans-serif;
-  font-size: clamp(3.5rem, 6.7vw, 7.5rem);
+  font-size: clamp(3.25rem, 4.6vw, 5.75rem);
   font-weight: 900;
   letter-spacing: -0.065em;
-  line-height: 0.84;
+  line-height: 0.88;
   text-transform: uppercase;
+}
+
+.faq-title > span {
+  display: block;
+  white-space: nowrap;
 }
 
 .faq-description {
