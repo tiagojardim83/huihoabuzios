@@ -39,23 +39,23 @@ export const Gallery = () => (
           Registros feitos por atletas e amigos da equipe.
         </p>
       </div>
+    </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
-        {photos.map((p, i) => (
-          <figure
-            key={i}
-            className="photo-frame media-outline media-outline-dark reveal group relative overflow-hidden aspect-[3/5]"
-            style={{ transitionDelay: `${i * 50}ms` }}
-          >
-            <img
-              src={p.src}
-              alt={p.alt}
-              loading="lazy"
-              className="h-full w-full object-cover photo-levels transition-transform duration-[1200ms] ease-out group-hover:scale-110"
-            />
-          </figure>
-        ))}
-      </div>
+    <div className="gallery-full-grid">
+      {photos.map((p, i) => (
+        <figure
+          key={i}
+          className="photo-frame media-outline media-outline-dark reveal group relative overflow-hidden aspect-[3/5]"
+          style={{ transitionDelay: `${i * 50}ms` }}
+        >
+          <img
+            src={p.src}
+            alt={p.alt}
+            loading="lazy"
+            className="h-full w-full object-cover photo-levels transition-transform duration-[1200ms] ease-out group-hover:scale-110"
+          />
+        </figure>
+      ))}
     </div>
   </section>
 );

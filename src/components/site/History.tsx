@@ -70,7 +70,7 @@ export const History = () => {
             </p>
             <p>
               Hoje somos uma comunidade construída sobre respeito, disciplina, amizade e amor pelo
-              oceano — formando atletas e levando Búzios cada vez mais longe.
+              oceano, formando atletas e levando Búzios cada vez mais longe.
             </p>
           </div>
         </header>

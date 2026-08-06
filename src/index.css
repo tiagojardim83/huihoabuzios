@@ -204,6 +204,26 @@
   animation-duration: 9s;
 }
 
+.gallery-full-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr);
+  gap: clamp(0.75rem, 1.3vw, 1.25rem);
+  padding-inline: clamp(0.5rem, 1vw, 1rem);
+}
+
+@media (min-width: 640px) {
+  .gallery-full-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .gallery-full-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
 /* Section labels and outline box system */
 .eyebrow-numbered {
   gap: 0.75rem;
@@ -306,9 +326,14 @@
   border-bottom: 1px solid hsl(var(--foreground) / 0.14);
 }
 
+.history-intro > div:first-child {
+  min-width: 0;
+  container-type: inline-size;
+}
+
 .history-heading {
   margin-top: 2rem;
-  font-size: clamp(3rem, 4.8vw, 5.75rem);
+  font-size: clamp(2.75rem, 7.2cqw, 5.25rem);
   line-height: 0.94;
 }
 
@@ -828,12 +853,15 @@
   display: grid;
   grid-template-columns: minmax(17rem, 0.72fr) minmax(0, 1.28fr);
   gap: clamp(4rem, 9vw, 9rem);
-  align-items: start;
+  align-items: stretch;
 }
 
 .faq-intro {
-  position: sticky;
-  top: 8.5rem;
+  position: relative;
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-self: stretch;
 }
 
 .faq-title {
@@ -861,6 +889,7 @@
 
 .faq-contact-link {
   display: inline-flex;
+  align-self: flex-start;
   align-items: center;
   gap: 1rem;
   margin-top: 2.5rem;
@@ -872,6 +901,12 @@
   letter-spacing: 0.14em;
   text-transform: uppercase;
   transition: gap 300ms ease, color 300ms ease;
+}
+
+@media (min-width: 900px) {
+  .faq-contact-link {
+    margin-top: auto;
+  }
 }
 
 .faq-contact-link:hover {
