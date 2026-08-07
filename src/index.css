@@ -332,9 +332,7 @@
 }
 
 .history-heading {
-  margin-top: 2rem;
-  font-size: clamp(2.75rem, 6vw, 4.5rem);
-  line-height: 0.94;
+  max-width: none;
 }
 
 .history-heading-line {
@@ -864,6 +862,7 @@
   align-self: stretch;
 }
 
+.section-title,
 .faq-title {
   margin-top: 2rem;
   font-family: 'Archivo', system-ui, sans-serif;
@@ -998,6 +997,7 @@
     position: static;
   }
 
+  .section-title,
   .faq-title {
     font-size: clamp(3.4rem, 12vw, 6rem);
   }
@@ -1267,12 +1267,6 @@
 
 .footer-heading {
   max-width: 12ch;
-  font-family: 'Archivo', system-ui, sans-serif;
-  font-size: clamp(3.5rem, 7.2vw, 8.5rem);
-  font-weight: 900;
-  letter-spacing: -0.065em;
-  line-height: 0.82;
-  text-transform: uppercase;
 }
 
 .footer-cta {
@@ -1487,11 +1481,6 @@
 
   .footer-intro-grid {
     gap: 2.5rem;
-  }
-
-  .footer-heading {
-    font-size: clamp(3.2rem, 15vw, 5.5rem);
-    line-height: 0.86;
   }
 
   .footer-navigation {

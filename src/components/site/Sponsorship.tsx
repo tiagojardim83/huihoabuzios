@@ -18,7 +18,7 @@ export const Sponsorship = () => (
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">07</span> Patrocínio
           </span>
-          <h2 className="reveal font-display text-4xl md:text-6xl lg:text-7xl mt-6 uppercase text-balance">
+          <h2 className="section-title reveal">
             Sua marca<br />
             <span className="text-primary">navegando</span><br />
             conosco.

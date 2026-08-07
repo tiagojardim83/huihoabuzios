@@ -32,7 +32,7 @@ export const Gallery = () => (
         <span className="eyebrow eyebrow-numbered text-accent reveal">
           <span className="eyebrow-number">06</span> Galeria
         </span>
-        <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
+        <h2 className="section-title reveal">
           Frames da nossa remada.
         </h2>
         <p className="reveal mt-4 text-background/60">

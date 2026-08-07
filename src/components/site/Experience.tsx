@@ -40,7 +40,7 @@ export const Experience = () => (
           <span className="eyebrow-number">03</span> Experiência
         </span>
         <div className="experience-title-row">
-          <h2 className="experience-title reveal font-display text-4xl md:text-6xl lg:text-7xl uppercase text-balance">
+          <h2 className="experience-title section-title reveal">
             <span>Muito mais</span>
             <span>que remar.</span>
           </h2>

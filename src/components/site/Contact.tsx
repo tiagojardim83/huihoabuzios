@@ -36,7 +36,7 @@ export const Contact = () => {
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">09</span> Contato
           </span>
-          <h2 className="reveal font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
+          <h2 className="section-title reveal">
             Vamos<br />conversar?
           </h2>
           <p className="reveal mt-6 text-muted-foreground text-lg">

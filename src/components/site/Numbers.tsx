@@ -20,7 +20,7 @@ export const Numbers = () => (
           <span className="eyebrow eyebrow-numbered text-accent reveal">
             <span className="eyebrow-number">02</span> Nossos Números
           </span>
-          <h2 className="reveal font-display text-4xl md:text-6xl mt-6 text-balance uppercase">
+          <h2 className="section-title reveal">
             Prova de<br />consistência.
           </h2>
         </div>

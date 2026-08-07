@@ -63,7 +63,7 @@ export const Competitions = () => {
           <span className="eyebrow eyebrow-numbered text-accent">
             <span className="eyebrow-number">05</span> Competições
           </span>
-          <h2 className="font-display text-4xl md:text-6xl mt-6 uppercase text-balance">
+          <h2 className="section-title">
             Evolução em<br />cada remada.
           </h2>
           <p className="mt-6 text-primary-foreground/75 text-lg leading-relaxed">
