@@ -59,7 +59,7 @@ export const Competitions = () => {
   <section id="competicoes" className="py-16 md:py-24 bg-primary text-primary-foreground">
     <div className="container-prose">
       <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 mb-16">
-        <div className="reveal flex flex-col">
+        <div className="reveal flex flex-col min-w-0">
           <span className="eyebrow eyebrow-numbered text-accent">
             <span className="eyebrow-number">05</span> Competições
           </span>

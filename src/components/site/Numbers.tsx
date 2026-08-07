@@ -16,7 +16,7 @@ export const Numbers = () => (
 
     <div className="container-prose relative">
       <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-        <div>
+        <div className="min-w-0">
           <span className="eyebrow eyebrow-numbered text-accent reveal">
             <span className="eyebrow-number">02</span> Nossos Números
           </span>

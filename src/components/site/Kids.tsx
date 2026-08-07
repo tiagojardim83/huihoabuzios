@@ -5,7 +5,7 @@ import kidsImg from "@/assets/kids-2.jpg";
 export const Kids = () => (
   <section id="kids" className="section-air bg-secondary/50">
     <div className="section-air-grid container-prose grid lg:grid-cols-2 items-center">
-      <div className="reveal order-2 lg:order-1">
+      <div className="reveal order-2 lg:order-1 min-w-0">
         <span className="eyebrow eyebrow-numbered text-accent">
           <span className="eyebrow-number">04</span> Projeto Kids · Gratuito
         </span>

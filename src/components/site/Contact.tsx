@@ -32,7 +32,7 @@ export const Contact = () => {
   return (
     <section id="contato" className="pt-16 md:pt-24 bg-background">
       <div className="container-prose grid lg:grid-cols-5 gap-12 lg:gap-20 pb-16 md:pb-24">
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 min-w-0">
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">09</span> Contato
           </span>

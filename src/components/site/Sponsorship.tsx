@@ -14,7 +14,7 @@ export const Sponsorship = () => (
   <section id="patrocinio" className="section-air bg-background">
     <div className="container-prose">
         <div className="section-air-grid grid lg:grid-cols-2 items-center">
-          <div>
+          <div className="min-w-0">
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">07</span> Patrocínio
           </span>
