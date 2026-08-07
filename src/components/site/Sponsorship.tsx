@@ -21,7 +21,7 @@ export const Sponsorship = () => (
           <h2 className="section-title reveal">
             Sua marca<br />
             <span className="text-primary">navegando</span><br />
-            conosco.
+            conosco
           </h2>
           <p className="reveal mt-8 text-foreground/75 text-lg leading-relaxed max-w-lg">
             Ao apoiar o Hui Hoa, sua empresa associa sua marca a esporte, saúde, qualidade de vida

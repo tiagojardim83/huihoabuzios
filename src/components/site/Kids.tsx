@@ -11,7 +11,7 @@ export const Kids = () => (
         </span>
         <h2 className="section-title text-primary">
           Formando<br />
-          atletas e cidadãos.
+          atletas e cidadãos
         </h2>
         <div className="mt-8 space-y-5 text-foreground/75 text-lg leading-relaxed">
           <p>

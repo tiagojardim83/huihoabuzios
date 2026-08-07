@@ -42,7 +42,7 @@ export const Experience = () => (
         <div className="experience-title-row">
           <h2 className="experience-title section-title reveal">
             <span>Muito mais</span>
-            <span>que remar.</span>
+            <span>que remar</span>
           </h2>
           <p className="experience-lead reveal">
             Corpo, técnica e comunidade em conexão constante com o oceano.

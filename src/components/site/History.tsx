@@ -55,9 +55,9 @@ export const History = () => {
           <div>
             <span className="eyebrow text-primary reveal">Nossa História</span>
             <h2 className="history-heading section-title reveal">
-              <span className="history-heading-line">Uma equipe.</span>
-              <span className="history-heading-line">Um oceano.</span>
-              <span className="history-heading-line history-heading-accent">Uma comunidade.</span>
+              <span className="history-heading-line">Uma equipe</span>
+              <span className="history-heading-line">Um oceano</span>
+              <span className="history-heading-line history-heading-accent">Uma comunidade</span>
             </h2>
           </div>
 

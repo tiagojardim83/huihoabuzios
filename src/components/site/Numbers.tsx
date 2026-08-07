@@ -21,7 +21,7 @@ export const Numbers = () => (
             <span className="eyebrow-number">02</span> Nossos Números
           </span>
           <h2 className="section-title reveal">
-            Prova de<br />consistência.
+            Prova de<br />consistência
           </h2>
         </div>
         <p className="reveal max-w-md text-primary-foreground/75 text-base">

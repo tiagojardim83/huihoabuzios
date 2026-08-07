@@ -33,7 +33,7 @@ export const Gallery = () => (
           <span className="eyebrow-number">06</span> Galeria
         </span>
         <h2 className="section-title reveal">
-          Frames da nossa remada.
+          Frames da nossa remada
         </h2>
         <p className="reveal mt-4 text-background/60">
           Registros feitos por atletas e amigos da equipe.

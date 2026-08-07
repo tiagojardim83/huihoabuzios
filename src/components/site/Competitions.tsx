@@ -64,7 +64,7 @@ export const Competitions = () => {
             <span className="eyebrow-number">05</span> Competições
           </span>
           <h2 className="section-title">
-            Evolução em<br />cada remada.
+            Evolução em<br />cada remada
           </h2>
           <p className="mt-6 text-primary-foreground/75 text-lg leading-relaxed">
             Representamos Búzios em cada remada. Do Rio de Janeiro aos maiores circuitos

@@ -25,7 +25,7 @@ export const Footer = () => (
 
       <div className="footer-intro-grid">
         <h2 className="footer-heading section-title">
-          O mar é o nosso<br />ponto de encontro.
+          O mar é o nosso<br />ponto de encontro
         </h2>
 
         <div className="footer-cta">
