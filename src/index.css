@@ -333,7 +333,7 @@
 
 .history-heading {
   margin-top: 2rem;
-  font-size: clamp(2.75rem, 7.2cqw, 5.25rem);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
   line-height: 0.94;
 }
 

@@ -21,7 +21,7 @@ export const Kids = () => (
           </p>
           <p>
             Mais do que ensinar a remar, ensinamos respeito, disciplina, trabalho em equipe e
-            conexão com o mar — valores que vão muito além da canoa.
+            conexão com o mar, valores que vão muito além da canoa.
           </p>
         </div>
         <div className="mt-10">
