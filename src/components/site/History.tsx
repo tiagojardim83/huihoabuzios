@@ -48,8 +48,6 @@ export const History = () => {
     };
   }, []);
 
-  const activeMoment = timeline[activeIndex];
-
   return (
     <section ref={sectionRef} id="historia" className="history-premium section-air">
       <div className="container-prose">
@@ -85,16 +83,6 @@ export const History = () => {
                 className="photo-levels"
               />
               <div className="history-visual-shade" />
-              <div className="history-visual-index">
-                {String(activeIndex + 1).padStart(2, "0")} / {String(timeline.length).padStart(2, "0")}
-              </div>
-              <div className="history-visual-caption">
-                <span className="history-visual-year">{activeMoment.year}</span>
-                <span className="history-visual-title">{activeMoment.title}</span>
-              </div>
-            </div>
-            <div className="history-scroll-note" aria-hidden="true">
-              Continue rolando para percorrer a nossa história
             </div>
           </aside>
 
