@@ -9,10 +9,9 @@ export const Kids = () => (
         <span className="eyebrow eyebrow-numbered text-accent">
           <span className="eyebrow-number">04</span> Projeto Kids · Gratuito
         </span>
-        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl mt-6 uppercase text-balance">
+        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl mt-6 uppercase text-balance text-primary">
           Formando<br />
-          <span className="text-primary">atletas</span> e{" "}
-          <span className="text-accent">cidadãos.</span>
+          atletas e cidadãos.
         </h2>
         <div className="mt-8 space-y-5 text-foreground/75 text-lg leading-relaxed">
           <p>
