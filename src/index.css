@@ -861,7 +861,7 @@
 .faq-title {
   margin-top: 2rem;
   font-family: 'Archivo', system-ui, sans-serif;
-  font-size: clamp(3.25rem, 4.6vw, 5.75rem);
+  font-size: clamp(3.25rem, 4.6vw, 4.75rem);
   font-weight: 900;
   letter-spacing: -0.065em;
   line-height: 0.88;

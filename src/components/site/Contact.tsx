@@ -31,13 +31,13 @@ export const Contact = () => {
 
   return (
     <section id="contato" className="pt-16 md:pt-24 bg-background">
-      <div className="container-prose grid lg:grid-cols-5 gap-12 lg:gap-20 pb-16 md:pb-24">
-        <div className="lg:col-span-2 min-w-0">
+      <div className="container-prose grid lg:grid-cols-2 gap-12 lg:gap-16 pb-16 md:pb-24">
+        <div className="min-w-0">
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">09</span> Contato
           </span>
           <h2 className="section-title reveal">
-            Vamos<br />conversar?
+            Vamos conversar?
           </h2>
           <p className="reveal mt-6 text-muted-foreground text-lg">
             Fale com a gente pelo formulário ou pelos canais abaixo. Respondemos rápido.
@@ -126,7 +126,7 @@ export const Contact = () => {
 
         <form
           onSubmit={onSubmit}
-          className="card-outline reveal lg:col-span-3 p-8 md:p-12 h-fit"
+          className="card-outline reveal p-8 md:p-12 h-fit"
           noValidate
         >
           <div className="grid sm:grid-cols-2 gap-5">
