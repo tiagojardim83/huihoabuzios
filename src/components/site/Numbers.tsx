@@ -1,4 +1,5 @@
 import { Counter } from "./Counter";
+import { useCenterActive } from "@/hooks/use-center-active";
 
 const cards = [
   { value: 143, suffix: "+", label: "Medalhas" },
@@ -8,6 +9,24 @@ const cards = [
   { value: 60, suffix: " mil+", label: "Visualizações mensais" },
   { value: 4, suffix: "x", label: "Treinos por semana" },
 ];
+
+const NumberCard = ({ card, index }: { card: (typeof cards)[number]; index: number }) => {
+  const { ref, active } = useCenterActive<HTMLDivElement>();
+  return (
+    <div
+      ref={ref}
+      className={`number-card reveal${active ? " is-active" : ""}`}
+      style={{ transitionDelay: `${index * 60}ms` }}
+    >
+      <div className="font-display text-5xl md:text-7xl leading-none">
+        <Counter to={card.value} suffix={card.suffix} />
+      </div>
+      <div className="mt-4 text-[11px] tracking-[0.2em] uppercase text-primary-foreground/70">
+        {card.label}
+      </div>
+    </div>
+  );
+};
 
 export const Numbers = () => (
   <section id="numeros" className="relative py-16 md:py-24 bg-primary text-primary-foreground overflow-hidden">
@@ -31,19 +50,8 @@ export const Numbers = () => (
       </div>
 
       <div className="number-grid grid-cols-2 md:grid-cols-3">
-        {cards.map((c, i) => (
-          <div
-            key={c.label}
-            className="number-card reveal p-8 md:p-10"
-            style={{ transitionDelay: `${i * 60}ms` }}
-          >
-            <div className="font-display text-5xl md:text-7xl leading-none">
-              <Counter to={c.value} suffix={c.suffix} />
-            </div>
-            <div className="mt-4 text-[11px] tracking-[0.2em] uppercase text-primary-foreground/70">
-              {c.label}
-            </div>
-          </div>
+        {cards.map((card, index) => (
+          <NumberCard key={card.label} card={card} index={index} />
         ))}
       </div>
     </div>

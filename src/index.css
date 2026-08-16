@@ -646,7 +646,8 @@
   content: "";
 }
 
-.number-card:hover {
+.number-card:hover,
+.number-card.is-active {
   background: hsl(var(--primary-deep) / 0.42);
   color: hsl(var(--accent));
 }
@@ -1163,18 +1164,21 @@
   transition: color 350ms ease;
 }
 
-.experience-pillar:hover {
+.experience-pillar:hover,
+.experience-pillar.is-active {
   background: hsl(var(--primary));
   color: hsl(var(--primary-foreground));
 }
 
-.experience-pillar:hover .experience-icon {
+.experience-pillar:hover .experience-icon,
+.experience-pillar.is-active .experience-icon {
   border-color: hsl(var(--accent));
   color: hsl(var(--accent));
   transform: translateY(-0.25rem);
 }
 
-.experience-pillar:hover p {
+.experience-pillar:hover p,
+.experience-pillar.is-active p {
   color: hsl(0 0% 100% / 0.7);
 }
 

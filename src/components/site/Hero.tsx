@@ -48,7 +48,7 @@ export const Hero = () => {
           <h1 className="text-display mt-6 text-5xl sm:text-7xl md:text-8xl lg:text-[9.5rem] text-white text-balance">
             Remar é apenas
             <br />
-            <span className="text-accent italic font-black not-italic">o começo.</span>
+            <span className="text-white italic font-black not-italic">o começo.</span>
           </h1>
 
           <p className="mt-8 max-w-2xl text-base md:text-lg text-white/85 leading-relaxed">

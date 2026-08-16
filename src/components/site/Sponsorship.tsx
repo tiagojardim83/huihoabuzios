@@ -18,8 +18,8 @@ export const Sponsorship = () => (
           <span className="eyebrow eyebrow-numbered text-primary reveal">
             <span className="eyebrow-number">07</span> Patrocínio
           </span>
-          <h2 className="section-title reveal">
-            Sua marca <span className="text-primary">navegando</span> conosco
+          <h2 className="section-title reveal text-primary">
+            Sua marca navegando conosco
           </h2>
           <p className="reveal mt-8 text-foreground/75 text-lg leading-relaxed max-w-lg">
             Ao apoiar o Hui Hoa, sua empresa associa sua marca a esporte, saúde, qualidade de vida

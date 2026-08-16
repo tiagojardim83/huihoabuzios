@@ -1,5 +1,6 @@
 import { Activity, Users, HeartPulse, Waves } from "lucide-react";
 import bg from "@/assets/experience.jpg";
+import { useCenterActive } from "@/hooks/use-center-active";
 
 const items = [
   {
@@ -23,6 +24,26 @@ const items = [
     desc: "O oceano como nosso maior parceiro — respeitado a cada remada.",
   },
 ];
+
+const ExperiencePillar = ({ item, index }: { item: (typeof items)[number]; index: number }) => {
+  const { ref, active } = useCenterActive<HTMLElement>();
+  return (
+    <article
+      ref={ref}
+      className={`experience-pillar reveal${active ? " is-active" : ""}`}
+      style={{ transitionDelay: `${index * 80}ms` }}
+    >
+      <div className="experience-pillar-top">
+        <span className="experience-icon">
+          <item.icon size={22} aria-hidden="true" />
+        </span>
+        <span className="experience-index">{String(index + 1).padStart(2, "0")}</span>
+      </div>
+      <h3>{item.title}</h3>
+      <p>{item.desc}</p>
+    </article>
+  );
+};
 
 export const Experience = () => (
   <section id="experiencia" className="experience-premium">
@@ -54,20 +75,7 @@ export const Experience = () => (
     <div className="experience-panel-wrap container-prose">
       <div className="experience-panel">
         {items.map((item, index) => (
-          <article
-            key={item.title}
-            className="experience-pillar reveal"
-            style={{ transitionDelay: `${index * 80}ms` }}
-          >
-            <div className="experience-pillar-top">
-              <span className="experience-icon">
-                <item.icon size={22} aria-hidden="true" />
-              </span>
-              <span className="experience-index">{String(index + 1).padStart(2, "0")}</span>
-            </div>
-            <h3>{item.title}</h3>
-            <p>{item.desc}</p>
-          </article>
+          <ExperiencePillar key={item.title} item={item} index={index} />
         ))}
       </div>
     </div>
