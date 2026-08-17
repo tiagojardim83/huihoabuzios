@@ -1402,9 +1402,9 @@
 
 .footer-links a {
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: clamp(1.3rem, 2vw, 2rem);
-  font-weight: 400;
-  letter-spacing: -0.01em;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.025em;
   transition: color 250ms ease;
 }
 
@@ -1419,7 +1419,6 @@
   }
 
   .footer-links a {
-    font-size: clamp(1rem, 1.2vw, 1.2rem);
     white-space: nowrap;
   }
 }
@@ -1512,10 +1511,6 @@
   .footer-links {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .footer-links a {
-    font-size: 1.7rem;
   }
 
   .footer-brand {
