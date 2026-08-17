@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import historyImg from "@/assets/bruno-e-sian.jpg";
+import { useCenterActive } from "@/hooks/use-center-active";
 
 const timeline = [
   { year: "2018", title: "Fundação", desc: "O Hui Hoa nasce em Búzios com um sonho coletivo." },
@@ -13,6 +14,7 @@ export const History = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const timelineRef = useRef<HTMLOListElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { ref: photoRef, active: photoActive } = useCenterActive<HTMLDivElement>();
 
   useEffect(() => {
     let frame: number | null = null;
@@ -75,7 +77,10 @@ export const History = () => {
 
         <div className="history-stage">
           <aside className="history-visual-column">
-            <div className="history-visual photo-frame reveal">
+            <div
+              ref={photoRef}
+              className={`history-visual photo-frame reveal${photoActive ? " is-active" : ""}`}
+            >
               <img
                 src={historyImg}
                 alt="Bruno e Sian, atletas da Hui Hoa Búzios"
